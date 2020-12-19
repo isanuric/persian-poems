@@ -1,0 +1,37 @@
+.image-top {
+  background-image: url("../images/p09.jpg");
+  height: 40rem;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-shadow: -1px 1px 1px black;
+  font-size: 0.7rem;
+  color: rgb(255, 255, 255);
+  padding-top: 5rem;
+}
+
+.index-body {
+  background: rgb(150, 174, 196);
+  height: 400vh; // push footer to end
+  h1 {
+    color: rgb(84, 103, 206);
+  }
+
+  // .main-index {
+  .index-main {
+    p {
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      color: rgb(19, 8, 91);
+    }
+  }
+}
+
+/* Responsibility */
+@media screen and (max-width: 980px) {
+  .image-top {
+    height: 20rem;
+    font-size: 0.4rem;
+    padding-top: 5rem;
+  }
+}

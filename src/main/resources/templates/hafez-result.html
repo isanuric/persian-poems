@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Poem</title>
+    <!-- <link rel="stylesheet" href="../static/style/style.css"> -->
+    <link rel="stylesheet" th:href="@{/style/style.css}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lemonada&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/hafez/}" class="navi-link">Home</a></li>
+                <li><a href="#" class="navi-link">About</a></li>
+                <li><a href="#" class="navi-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <dev class="text-column">
+            <dev class="link-back">
+                <a th:href="@{/hafez/}" class="navi-link">بازگشت</a>
+            </dev>
+            <pre>
+                <p th:text="${poem}">            
+            </pre>
+
+            <dev class="link-back">
+                <a th:href="@{/hafez/}" class="navi-link">بازگشت</a>
+            </dev>
+        </dev>
+
+
+
+    </main>
+</body>
+
+</html>
