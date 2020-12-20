@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  margin: 0;
   height: 100vh;
   background-color: rgb(233, 225, 225);
 
@@ -47,20 +48,18 @@ body {
     font-size: 0.7rem;
     // background-color: lightcoral;
 
+    .poet-title {
+      padding-top: 0.1rem;
+      font-size: 1rem;
+      color: rgba(167, 14, 11, 0.817);
+    }
+
     .text-column {
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* make main-axis vertical */
+      justify-content: center; /* align items vertically, in this case */
+      align-items: center; /* align items horizontally, in this case */
       // background-color: rgb(169, 193, 193);
-
-      .link-back {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 0.4rem;
-        padding: 1rem 0 0 0;
-        text-align: center;
-        // background-color: #0627df80;
-      }
     }
 
     p {
@@ -69,13 +68,67 @@ body {
     }
   }
 
-  footer {
-    width: 100%;
+  .link-back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.4rem;
+    padding: 1rem 0 0 0;
     text-align: center;
+    // background-color: #0627df80;
+  }
+}
+
+// Resposibility
+@media screen and (max-width: 500px) {
+  body {
+    main {
+      flex-direction: column;
+      // background-color: #06d85f;
+    }
+  }
+}
+
+#page-container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* make main-axis vertical */
+  justify-content: center; /* align items vertically, in this case */
+  align-items: center; /* align items horizontally, in this case */
+  position: relative;
+  min-height: 100vh;
+
+  #content-wrap {
+    padding-bottom: 2.5rem; /* Footer height */
+    font-size: 1.9rem;
+  }
+
+  p {
+    font-family: "Amiri", serif;
+    // background-color: #06d85f;
+  }
+
+  #footer {
     position: absolute;
     bottom: 0;
-    padding: 25px;
-    font-size: 0.4rem;
+    width: 100%;
+    height: 2.5rem; /* Footer height */
+    text-align: center;
+    font-size: 0.5rem;
+  }
+}
+
+#center-container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* make main-axis vertical */
+  justify-content: space-between; /* align items vertically, in this case */
+  align-items: center; /* align items horizontally, in this case */
+  font-size: 0.5rem;
+
+  .box {
+    width: 300px;
+    margin: 2rem;
+    text-align: center;
+    padding-top: 3rem;
 
     ul {
       display: flex;
@@ -89,6 +142,18 @@ body {
       margin: 0 5px;
     }
   }
+
+  .footer {
+    text-align: center;
+    font-size: 0.5rem;
+    // min-height: 1rem;
+    padding: 1rem;
+    background-color: #06d85f;
+
+    a {
+      padding: 0.2rem;
+    }
+  }
 }
 
 // links general
@@ -100,90 +165,6 @@ a {
   }
 
   &:visited {
-    color: rgb(70, 48, 48);
-  }
-}
-
-// popup
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
-}
-
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06d85f;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06d85f;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06d85f;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-@media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
-  .popup {
-    width: 70%;
+    color: rgba(200, 34, 5, 0.452);
   }
 }

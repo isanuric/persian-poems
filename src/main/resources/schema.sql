@@ -10,3 +10,4 @@ CREATE TABLE poems(
     poem VARCHAR (1024),
     created_on TIMESTAMP NOT NULL DEFAULT NOW()
 );
+

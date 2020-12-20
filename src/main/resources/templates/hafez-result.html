@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Poem</title>
-    <!-- <link rel="stylesheet" href="../static/style/style.css"> -->
+    <link rel="stylesheet" href="../static/style/style.css">
     <link rel="stylesheet" th:href="@{/style/style.css}">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lemonada&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a th:href="@{/hafez/}" class="navi-link">Home</a></li>
+                <li><a th:href="@{/}" class="navi-link">Home</a></li>
                 <li><a href="#" class="navi-link">About</a></li>
                 <li><a href="#" class="navi-link">Contact</a></li>
             </ul>
@@ -30,6 +30,7 @@
             <dev class="link-back">
                 <a th:href="@{/hafez/}" class="navi-link">بازگشت</a>
             </dev>
+
             <pre>
                 <p th:text="${poem}">            
             </pre>
@@ -38,10 +39,18 @@
                 <a th:href="@{/hafez/}" class="navi-link">بازگشت</a>
             </dev>
         </dev>
-
-
-
     </main>
+
+    <!-- <div lang="en" th:replace="/footer :: footer"> </div> -->
+    <div id="center-container">
+        <div class="box">
+            <p>created by &copy ehsan salmani</p>
+            <p>all rights reserved |
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </div>
+    </div>
+
 </body>
 
 </html>

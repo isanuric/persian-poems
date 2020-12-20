@@ -8,21 +8,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <title>Persian Poetry</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lemonada&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/style/style.css">
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    <link rel="stylesheet" th:href="@{/style/style.css}">
+
+
 </head>
 
-<body class="index-body">
+<body class="body">
 
-    <h1>
-        Welcome to Hafez Poetry
-    </h1>
+    <div id="page-container">
+        <div id="content-wrap">
+            <p><a href="/hafez/">حافظ</a></p>
+        </div>
 
-    <main class="index-main">
-        <p><a href="/hafez/">Hafez</a></p>
-        <p><a href="/poems-page">Molavi</a></p>
-        <p><a href="/hafez/poem/1">Test</a></p>
-    </main>
+        <footer id="footer">
+            <p>created by &copy ehsan salmani</p>
+            <p>
+                all rights reserved |
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </footer>
+    </div>
 
 </body>
 
